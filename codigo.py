@@ -8,7 +8,7 @@ intents.voice_states = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-file = r"Audios/festa-junina.mp3"  # Variável para o caminho do arquivo de áudio
+file = "festa-junina.mp3"  # Variável para o caminho do arquivo de áudio
 
 @bot.event
 async def on_ready():
@@ -60,4 +60,4 @@ async def on_voice_state_update(member, before, after):
     else:
         print(f'{member.name} did not join a new channel')
 
-bot.run('MTI0ODQwNDM0MzYwMjk0MjA3Mg.Gk5wV2.Qm4tIMrTaGf-4umyZ7i3vWq1bSA06R1X5NfLc0')
+bot.run(os.getenv('DISCORD_TOKEN'))
